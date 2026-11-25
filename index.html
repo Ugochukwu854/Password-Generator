@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Password Generator</h1>
+    <p class="subtitle">Create strong, random passwords</p>
+
+    <div class="developer-info">
+      <p><strong>Developer:</strong> OGUEKWE UGOCHUKWU EDWIN</p>
+      <p><strong>Matric No:</strong> 240404010065</p>
+      <p><strong>Group:</strong> VPE Group 6</p>
+    </div>
+
+    <section class="panel">
+      <div class="output-row">
+        <input type="text" id="password-output" readonly aria-label="Generated password" placeholder="Your password appears here">
+        <button type="button" id="copy-btn" class="btn btn-alt">Copy</button>
+      </div>
+
+      <div class="strength">
+        <div class="strength-bar">
+          <div id="strength-fill" class="strength-fill"></div>
+        </div>
+        <p class="strength-text">Strength: <strong id="strength-label">-</strong></p>
+      </div>
+
+      <p id="copy-message" class="message ok" role="status"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Options</h2>
+
+      <div class="form-row">
+        <label for="length-slider">Password length: <span id="length-value">12</span></label>
+        <input type="range" id="length-slider" min="6" max="32" value="12">
+      </div>
+
+      <label class="check-row">
+        <input type="checkbox" id="upper-check" checked>
+        Uppercase letters (A to Z)
+      </label>
+      <label class="check-row">
+        <input type="checkbox" id="lower-check" checked>
+        Lowercase letters (a to z)
+      </label>
+      <label class="check-row">
+        <input type="checkbox" id="numbers-check" checked>
+        Numbers (0 to 9)
+      </label>
+      <label class="check-row">
+        <input type="checkbox" id="symbols-check">
+        Symbols (!@#$%&*)
+      </label>
+      <label class="check-row">
+        <input type="checkbox" id="similar-check">
+        Leave out look-alike characters (i, l, 1, L, o, 0, O)
+      </label>
+
+      <button type="button" id="generate-btn" class="btn">Generate Password</button>
+      <p id="error-message" class="message" role="alert"></p>
+    </section>
+
+    <p class="note">Passwords are made in your browser. They are never sent anywhere or saved.</p>
+  </main>
+
+  <footer>
+    <p>Developed by OGUEKWE UGOCHUKWU EDWIN | Matric No: 240404010065 | VPE Group 6</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
